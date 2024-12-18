@@ -33,15 +33,6 @@ async def delete_user(user_id):
     del users[user_id]
     return {f'User {user_id} has been deleted'}
 
-"""@app.post("/user/{user_id}")
-async def create_user(user_id: int = Path(ge=1, lt=100, description="Enter User ID", example="1")):
-    return {f"Вы вошли как пользователь № {user_id}"}"""
-
-
-"""@app.post('/user/{username}/{age}')
-async def info(username: str = Path(min_length=5, max_length=20, description="Enter username", example="Enter age"), age: int = Path(ge=18, le=120, description="Enter age", example="24")):
-    return {f'Информация о пользователе. Имя: {username}, Возраст: {age}'}"""
-
 
 if __name__ == "__main__":
     uvicorn.run(app, host="127.0.0.1", port=8005)
